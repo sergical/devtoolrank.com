@@ -115,7 +115,7 @@
 <p>The right choice depends on your team size, budget, and whether you want a specialised error tool or a single pane of glass for everything.</p>
 <hr>
 <h2 id="what-is-sentry">What Is Sentry?</h2>
-<p>Sentry is an open-core error tracking and performance monitoring platform. It started as a simple exception logger and has grown into a full observability suite with:</p>
+<p>Sentry is a source-available error tracking and performance monitoring platform. It started as a simple exception logger and has grown into a full observability suite with:</p>
 <ul>
 <li><strong>Error Tracking</strong> – automatic grouping, source maps, breadcrumbs, and user context.</li>
 <li><strong>Performance Monitoring</strong> – distributed tracing with transaction and span visibility.</li>
@@ -123,8 +123,8 @@
 <li><strong>Crash Reporting</strong> – native support for mobile apps (iOS, Android, Unity, etc.).</li>
 <li><strong>Profiling</strong> – continuous code profiling in production.</li>
 </ul>
-<p>Sentry is especially loved by frontend teams because it captures JavaScript errors with source maps out of the box. The free tier (5k errors/month, 1GB traces) is generous for small projects.</p>
-<p><strong>Pricing:</strong> Starts at $26/month for the Team plan (50k errors, 10GB traces). The Business plan ($80/month) adds advanced features like replays and cross-project dashboards. Self-hosted is available for free (open source).</p>
+<p>Sentry is especially loved by frontend teams because it captures JavaScript errors with source maps out of the box. The free tier (5k errors, 5M spans, 50 replays and 5GB of logs per month) is generous for small projects.</p>
+<p><strong>Pricing:</strong> Team is $26/month (50k errors, 5M spans, 50 replays, 5GB logs). Replay is included on every plan. Business adds more metric monitors and advanced quota management. There’s a free self-hosted version under the Functional Source License.</p>
 <p><a href="https://sentry.io" rel="nofollow sponsored">Try Sentry -></a></p>
 <hr>
 <h2 id="what-is-datadog">What Is Datadog?</h2>
@@ -148,13 +148,13 @@
 <tbody>
 <tr><td><strong>Error Tracking</strong></td><td>★★★★★ Best-in-class grouping, source maps, breadcrumbs</td><td>★★★★ Good, but less intelligent grouping</td><td>★★★ Basic, no automatic source map resolution</td></tr>
 <tr><td><strong>APM / Tracing</strong></td><td>★★★★ Distributed tracing, spans, performance issues</td><td>★★★★★ Full APM with service maps, flame graphs</td><td>★★★★★ Mature APM with deep database insights</td></tr>
-<tr><td><strong>Log Management</strong></td><td>★★ Basic (limited to error logs)</td><td>★★★★★ Full log ingestion, search, pipelines</td><td>★★★★ Logs included, but retention costs extra</td></tr>
+<tr><td><strong>Log Management</strong></td><td>★★ Structured logs with search, 5GB/month included on every plan</td><td>★★★★★ Full log ingestion, search, pipelines</td><td>★★★★ Logs included, but retention costs extra</td></tr>
 <tr><td><strong>Infrastructure Monitoring</strong></td><td>★★ Not available</td><td>★★★★★ 700+ integrations, host metrics</td><td>★★★★ Good, but fewer integrations than Datadog</td></tr>
 <tr><td><strong>Real User Monitoring</strong></td><td>★★★★ Replay, performance, errors</td><td>★★★★ RUM with session replays</td><td>★★★ Basic page load timing</td></tr>
 <tr><td><strong>Session Replay</strong></td><td>★★★★★ Video-like, includes console & network</td><td>★★★★ Available but costs extra</td><td>★★ Not available</td></tr>
 <tr><td><strong>Synthetic Monitoring</strong></td><td>★★ Limited (via integrations)</td><td>★★★★★ Browser & API tests</td><td>★★★★ Browser tests</td></tr>
 <tr><td><strong>Alerts</strong></td><td>★★★ Simple but effective</td><td>★★★★★ Highly customisable, noisy</td><td>★★★★ Good, but complex</td></tr>
-<tr><td><strong>Open Source / Self-Hosted</strong></td><td>★★★★★ Yes (MIT license)</td><td>★★ No</td><td>★★ No</td></tr>
+<tr><td><strong>Open Source / Self-Hosted</strong></td><td>★★★★★ Self-hosted yes (server is FSL-licensed; SDKs are MIT)</td><td>★★ No</td><td>★★ No</td></tr>
 <tr><td><strong>Ease of Setup</strong></td><td>★★★★★ One SDK, minutes</td><td>★★★ Agent installation, configuration</td><td>★★★ Agent + license key</td></tr>
 </tbody>
 </table>
@@ -169,8 +169,8 @@
 <table class="price-table">
 <thead><tr><th>Tier / Plan</th><th>Sentry</th><th>Datadog</th><th>New Relic</th></tr></thead>
 <tbody>
-<tr><td><strong>Free</strong></td><td>5k errors/mo, 1GB traces, 1 user</td><td>5 hosts, 1 day retention, limited logs</td><td>100 GB data/mo, 1 user, 30-day retention</td></tr>
-<tr><td><strong>Entry Paid</strong></td><td>$26/mo (50k errors, 10GB traces)</td><td>$15/host/mo (min 5 hosts = $75/mo)</td><td>Starts at $0.25/GB ingested (no fixed host pricing)</td></tr>
+<tr><td><strong>Free</strong></td><td>5k errors, 5M spans, 50 replays, 5GB logs/mo, 1 user</td><td>5 hosts, 1 day retention, limited logs</td><td>100 GB data/mo, 1 user, 30-day retention</td></tr>
+<tr><td><strong>Entry Paid</strong></td><td>$26/mo (50k errors, 5M spans, 5GB logs)</td><td>$15/host/mo (min 5 hosts = $75/mo)</td><td>Starts at $0.25/GB ingested (no fixed host pricing)</td></tr>
 <tr><td><strong>Mid-Tier</strong></td><td>$80/mo (Business)</td><td>Pro + $1.50/1000 RUM sessions</td><td>Pro: $0.50/GB + per-user license</td></tr>
 <tr><td><strong>Enterprise</strong></td><td>Custom</td><td>Custom</td><td>Custom</td></tr>
 <tr><td><strong>Hidden Costs</strong></td><td>Overages for errors and traces</td><td>Logs, RUM, APM host counts</td><td>Data overage, user licenses</td></tr>
@@ -182,14 +182,14 @@
 <p><strong>Pros:</strong></p>
 <ul>
 <li>Exceptional error grouping – rarely see duplicate issues</li>
-<li>Open source core – self-host for free, no vendor lock-in</li>
+<li>Free self-hosted option (source-available under the FSL), with MIT-licensed SDKs</li>
 <li>Session replay is the best in class for debugging user issues</li>
 <li>SDKs for every major language and framework</li>
 <li>Generous free tier for small projects</li>
 </ul>
 <p><strong>Cons:</strong></p>
 <ul>
-<li>No log management – you need a separate tool (e.g., <a href="https://www.datadoghq.com" rel="nofollow sponsored">Datadog</a> or <a href="https://logtail.com" rel="nofollow sponsored">Logtail</a>)</li>
+<li>Log management is newer and lighter than dedicated log platforms like <a href="https://www.datadoghq.com" rel="nofollow sponsored">Datadog</a> or <a href="https://logtail.com" rel="nofollow sponsored">Logtail</a></li>
 <li>Infrastructure monitoring is non-existent – no host metrics, no Kubernetes dashboards</li>
 <li>Alerts are basic – can’t do complex multi-condition alerts</li>
 <li>Performance monitoring is good but not as deep as Datadog’s APM (e.g., no database query explain plans)</li>
@@ -216,7 +216,7 @@
 <ul>
 <li><strong>You’re a solo developer or small team</strong> – the free tier and simple setup let you focus on code.</li>
 <li><strong>Your primary pain point is errors</strong> – frontend JavaScript errors, backend exceptions, mobile crashes. Sentry’s grouping and breadcrumbs are unmatched.</li>
-<li><strong>You want to self-host</strong> – Sentry’s open-source version runs on Docker and is perfect for compliance-heavy environments.</li>
+<li><strong>You want to self-host</strong> – Sentry’s self-hosted version runs on Docker and is a good fit for compliance-heavy environments.</li>
 <li><strong>You already have a log aggregator</strong> – Sentry pairs nicely with <a href="https://www.[Digitalocean](https://www.digitalocean.com/?refcode=revenueclaw" rel="nofollow sponsored">DigitalOcean’s Managed Logging</a>.com/products/managed-databases) or <a href="https://[Railway](https://railway.app/?referral=revenueclaw" rel="nofollow sponsored">Railway’s built-in logs</a>.app).</li>
 </ul>
 <p><strong>Avoid Sentry if:</strong> You need infrastructure monitoring, synthetic checks, or a single platform for everything.</p>
@@ -245,7 +245,7 @@
 <h3 id="does-sentry-support-mobile-crash-reporting">Does Sentry support mobile crash reporting?</h3>
 <p>Yes, Sentry has native SDKs for iOS, Android, Unity, and more. It’s one of the best mobile crash tools.</p>
 <h3 id="can-i-self-host-sentry-for-free">Can I self-host Sentry for free?</h3>
-<p>Yes, the open-source version is free and self-hosted via Docker. The hosted version is more convenient for most.</p>
+<p>Yes, the self-hosted version is free and runs via Docker (source-available under the FSL). The hosted version is more convenient for most.</p>
 <h3 id="which-tool-is-best-for-serverless-apps">Which tool is best for serverless apps?</h3>
 <p>Sentry’s lightweight SDKs work well with AWS Lambda, <a href="https://vercel.com/?ref=revenueclaw" rel="nofollow sponsored">Vercel</a>, and Cloudflare Workers. Datadog has serverless integrations but requires more setup. <a href="https://[Vercel](https://vercel.com/?ref=revenueclaw" rel="nofollow sponsored">Vercel’s own analytics</a>.com/analytics) is also worth considering for frontend-only apps.</p>
 <h3 id="how-do-i-migrate-from-new-relic-to-sentry">How do I migrate from New Relic to Sentry?</h3>
